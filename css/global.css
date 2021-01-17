@@ -1,0 +1,428 @@
+header nav ul li a,
+.mainArea span,
+.synopsisArea dl dt,
+.oudertrailerArea h2,
+.characterArea h2,
+.characterArea .swiper-wrapper .swiper-slide figure figcaption h3,
+.aboutArea h2,
+.galleryArea h2,
+.soundtrackArea h2,
+.soundtrackArea .tab .content div p,
+.soundtrackArea .tab .musicList h3,
+.soundtrackArea .tab .musicList ul li span{
+    font-family: 'Josefin Sans', sans-serif;
+    /* color: darkblue; 폰트 확인용 */
+}
+
+.mainArea q,
+.synopsisArea dl dd,
+.reviewSlider .swiper-wrapper .swiper-slide blockquote > *,
+.oudertrailerArea h2 > small,
+.characterArea > h2  small,
+.characterSlider .swiper-wrapper .swiper-slide figure figcaption span,
+.characterSlider .swiper-wrapper .swiper-slide figure figcaption p,
+.aboutArea > h2 small,
+.aboutSlide .swiper-wrapper .swiper-slide span,
+.aboutSlide .swiper-wrapper .swiper-slide h3,
+.aboutSlide .swiper-wrapper .swiper-slide p,
+.galleryArea h2 small,
+.galleryArea > p:last-of-type,
+.soundtrackArea h2 small,
+footer div:last-of-type > *{
+    font-family: 'Noto Sans KR', sans-serif;
+    /* color: brown; 폰트 확인용 */
+}
+
+a{
+    text-decoration: none;
+}
+body{
+    height: 100%;
+}
+h2{
+    font-size: 40px; font-weight: 700; text-align: center; margin-bottom: 100px;
+}
+h2 small{
+    font-size: 18px; font-weight: 400; margin-bottom: 25px; display: block; opacity: 0.6;
+}
+
+@media screen and (max-width: 767px){
+    a.top-button{
+        width: 35px;
+        height: 35px;
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 17.5px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        z-index: 1000;
+        display: inline-block;
+        position: fixed; bottom: 20px; right: 20px;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transition-duration: 0.3s;
+        transition-property: backgruond-color, opacity, visibility;
+    }
+    a .top-button .material-icons{
+        font-size: 35px;
+        color: rgba(0, 0, 0, 0.5);
+    }
+    a .active-top-button{
+        opacity: 1;
+        visibility: visible;
+    }
+    a .active-top-button:hover{
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    a .active-top-button:hover .material-icons{
+        color: black;
+    }
+    /* ? top button css */
+    header{
+        width: 100%; background-color: #101113; line-height: 60px;
+        position: fixed; left: 0; top: 0; z-index: 100; padding: 0 18px; box-sizing: border-box;
+    }
+    .menubar::after{
+        display: block; visibility: hidden; clear: both; content: '';
+    }
+    .menubar{
+        cursor: pointer; color: white; display: block;
+    }
+    .menubar .menuham,
+    .menubar .close{
+        float: right; line-height: 60px;
+    }
+    header nav ul li{
+        height: 0; opacity: 0; line-height: 0;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in-out;
+        transition-property: height, opacity, line-height;
+    }
+    header nav ul li a{
+        opacity: 0;
+    }
+    header nav .activeMenu li{
+        height: 62px; opacity: 1; line-height: 62px;
+    }
+    header nav .activeMenu li a{
+        opacity: 1;
+        font-size: 35px; color: rgba(255, 255, 255, 0.5);
+    }
+    /* ? animation */
+    .menubar .close,
+    .menubar .invisible{
+        display: none;
+    }
+    .menubar .visible{
+        display: block;
+    }
+    header nav .activeMenu{
+        display: block; text-align: center;
+    }
+    header nav .activeMenu li a:hover{
+        color: white; border-bottom: 1px solid white;
+    }
+    
+    /* header fin */
+
+    footer div:first-child{
+        background-color: #2a2c2f; padding: 100px 0; text-align: right;
+        overflow: hidden; position: relative; width: 100%;
+    }
+    /* footer div:first-child ul;::after{
+        display: block; visibility: hidden; clear: both; content: '';
+    } */
+    footer div:first-child ul::after{
+        /* content: ''; white-space: nowrap; padding-left: 100px;  */
+    }
+    footer div:first-child ul{
+        display: block; 
+        transform: translateX(100vw);
+        white-space: nowrap;
+        animation-name: test;
+        animation-timing-function: linear;
+        animation-duration: 15s; animation-iteration-count: infinite;
+        width: max-content;
+        
+    }
+    footer div:first-child ul:hover{
+        animation-play-state: paused;
+    }
+    @keyframes test{
+        0% {
+            transform: translateX(100vw);
+        }
+        100%{
+            transform: translate(-100%);
+        }
+    }
+    footer div:first-child ul li{
+        display: inline-block;
+    }
+    footer div:first-child ul li:not(:last-child){
+        margin-right: 100px;
+    }
+    footer div:first-child ul li a{
+        display: block;
+    }
+    footer div:first-child ul li a img{
+        width: 100%;
+    }
+    footer div:last-child{
+        background-color: #181818; padding: 40px 0;
+    }
+    footer div:last-child span,
+    footer div:last-child p{
+        color: white; opacity: 0.6; text-align: center; display: block;
+    }
+    footer div:last-child span{
+        margin-bottom: 15px; font-size: 20px; font-weight: 400;
+    }
+    footer div:last-child p{
+        font-size: 16px; font-weight: 300; line-height: 24px;
+    }
+
+}
+/* ? mobile */
+
+@media screen and (min-width: 768px) and (max-width: 1299px){
+    a.top-button{
+        width: 50px;
+        height: 50px;
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 25px;
+        box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        z-index: 1000;
+        display: inline-block;
+        position: fixed; bottom: 25px; right: 25px;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transition-duration: 0.3s;
+        transition-property: backgruond-color, opacity, visibility;
+    }
+    a.top-button .material-icons{
+        font-size: 50px;
+        color: rgba(0, 0, 0, 0.5);
+    }
+    a.active-top-button{
+        opacity: 1;
+        visibility: visible;
+    }
+    a.active-top-button:hover{
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    a.active-top-button:hover .material-icons{
+        color: black;
+    }
+    /* ? top button css */
+    header{
+        width: 100%; background-color: #101113; line-height: 100px;
+        position: fixed; left: 0; top: 0; z-index: 100; padding: 0 40px; box-sizing: border-box;
+    }
+    .menubar::after{
+        display: block; visibility: hidden; clear: both; content: '';
+    }
+    .menubar{
+        cursor: pointer; color: white; display: block;
+    }
+    .menubar .menuham,
+    .menubar .close{
+        float: right; line-height: 100px;
+    }
+    .menubar .close,
+    .menubar .invisible{
+        display: none;
+    }
+    header nav ul li{
+        height: 0; opacity: 0; line-height: 0;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in-out;
+    }
+    header nav ul li a{
+        opacity: 0;
+    }
+    header nav .activeMenu li{
+        height: 75px; opacity: 1;
+        line-height: 75px;
+    }
+    header nav .activeMenu li a{
+        opacity: 1;
+        font-size: 35px; color: rgba(255, 255, 255, 0.5);
+    }
+    .menubar .visible{
+        display: block;
+    }
+    header nav .activeMenu{
+        display: block; text-align: center;
+    }
+    header nav .activeMenu a{
+        font-size: 50px; color: rgba(255, 255, 255, 0.5); 
+        /* padding: 20px; */
+    }
+    header nav .activeMenu a:hover{
+        color: white; border-bottom: 1px solid white;
+    }
+    
+    /* header fin */
+
+    footer div:first-child{
+        background-color: #2a2c2f; padding: 100px 0; text-align: right;
+        overflow: hidden; position: relative; width: 100%;
+    }
+    /* footer div:first-child ul;::after{
+        display: block; visibility: hidden; clear: both; content: '';
+    } */
+    footer div:first-child ul::after{
+        /* content: ''; white-space: nowrap; padding-left: 100px;  */
+    }
+    footer div:first-child ul{
+        display: block; 
+        transform: translateX(100vw);
+        white-space: nowrap;
+        animation-name: test;
+        animation-timing-function: linear;
+        animation-duration: 15s; animation-iteration-count: infinite;
+        width: max-content;
+        
+    }
+    footer div:first-child ul:hover{
+        animation-play-state: paused;
+    }
+    @keyframes test{
+        0% {
+            transform: translateX(100vw);
+        }
+        100%{
+            transform: translate(-100%);
+        }
+    }
+    footer div:first-child ul li{
+        display: inline-block;
+    }
+    footer div:first-child ul li:not(:last-child){
+        margin-right: 100px;
+    }
+    footer div:first-child ul li a{
+        display: block;
+    }
+    footer div:first-child ul li a img{
+        width: 100%;
+    }
+    footer div:last-child{
+        background-color: #181818; padding: 40px 0;
+    }
+    footer div:last-child span,
+    footer div:last-child p{
+        color: white; opacity: 0.6; text-align: center; display: block;
+    }
+    footer div:last-child span{
+        margin-bottom: 15px; font-size: 20px; font-weight: 400;
+    }
+    footer div:last-child p{
+        font-size: 16px; font-weight: 300; line-height: 24px;
+    }
+
+}
+/* ? tablet */
+
+@media screen and (min-width: 1300px){
+    a.top-button{
+        width: 50px;
+        height: 50px;
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 25px;
+        box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        z-index: 1000;
+        display: inline-block;
+        position: fixed; bottom: 25px; right: 25px;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transition-duration: 0.3s;
+        transition-property: backgruond-color, opacity, visibility;
+    }
+    a.top-button .material-icons{
+        font-size: 50px;
+        color: rgba(0, 0, 0, 0.5);
+    }
+    a.active-top-button{
+        opacity: 1;
+        visibility: visible;
+    }
+    a.active-top-button:hover{
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    a.active-top-button:hover .material-icons{
+        color: black;
+    }
+    /* ? top button css */
+    header{
+        width: 100%; background-color: #101113; line-height: 98px;
+        position: fixed; left: 0; top: 0; z-index: 100;
+    }
+    header nav ul{
+        text-align: center;
+    }
+    header nav ul li{
+        display: inline-block;
+    }
+    header nav ul li:not(:last-of-type){
+        margin-right: 55px;
+    }
+    header nav ul li a{
+        color: white; font-size: 14px; opacity: 0.5; padding: 40px 0;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in-out;
+        transition-property: opacity, color, border-bottom;
+    }
+    header nav ul li a:hover{
+        color: white; opacity: 1; border-bottom: 1px solid rgba(255, 255, 255, 0.7); padding-bottom: 40px;
+    }
+    /* header nav ul li .activecolor{
+        color: white; font-size: 16px; opacity: 1; padding: 40px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 1);
+        padding-bottom: 40px;
+    } */
+    header nav ul li .activemenucolor{
+        color: white; font-size: 16px; opacity: 1;
+        /* border-bottom: 1px solid rgba(255, 255, 255, 1); */
+    }
+    .menubar{
+        display: none; /* ? tablet mobile menubar*/
+    }
+    /* header fin */
+
+    footer div:first-child{
+        background-color: #2a2c2f; padding: 100px 0; text-align: center;
+    }
+    /* footer div:first-child ul;::after{
+        display: block; visibility: hidden; clear: both; content: '';
+    } */
+    footer div:first-child ul li{
+        display: inline-block;
+    }
+    footer div:first-child ul li:not(:last-child){
+        margin-right: 107px;
+    }
+    footer div:first-child ul li a{
+        display: block;
+    }
+    footer div:last-child{
+        background-color: #181818; padding: 40px 0;
+    }
+    footer div:last-child span,
+    footer div:last-child p{
+        color: white; opacity: 0.6; text-align: center; display: block;
+    }
+    footer div:last-child span{
+        margin-bottom: 15px; font-size: 20px; font-weight: 400;
+    }
+    footer div:last-child p{
+        font-size: 16px; font-weight: 300; line-height: 24px;
+    }
+
+}
+/* ? desktop */
